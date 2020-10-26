@@ -1,0 +1,25 @@
+
+    <div class="container-fluid">
+      <div class="container">
+        <h1>So what's in your mind?</h1>
+        <br>
+        <form class="" action="/admin/compose" method="post" enctype="multipart/form-data">
+          <label for="authorName">Author Name</label>
+          <input type="text" name="authorName" class="form-control" autocomplete="off">
+          <br>
+          <label for="text" class="titlebar">Title</label>
+          <input type="text" class="form-control" required=true name="title" placeholder="Eg. The Jungle Book" autocomplete="off">
+          <br>
+          <div class="form-group">
+            <label for="file">Upload File</label>
+            <input type="file" class="form-control" name="fileUpload" id="file">
+          </div>
+          <label for="description">Post</label>
+          <textarea name="description" class="form-control" rows="5" cols="80"></textarea>
+          <br>
+          <button class="btn btn-primary btn-success" type="submit" name="button">Publish</button>
+        </form>
+      </div>
+    </div>
+
+

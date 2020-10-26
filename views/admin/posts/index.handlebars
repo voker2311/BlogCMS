@@ -1,0 +1,29 @@
+
+<div class="container">
+{{!-- Success or error message --}}
+    {{> admin/messages}}
+    <div class="page-content container">
+        <div class="post-container">
+            <h2>All Posts</h2>
+            <table class="table table-bordered">
+                <thead class="bg-dark text-center">
+                    <tr class="text-white">
+                    <th>Title</th>
+                    <th>Modify</th>
+                    <th>Published by</th>
+                    </tr>
+                </thead>
+
+                <tbody class="text-center">
+                {{#each posts}}
+                    <tr>
+                    <td>{{title}}</td>
+                    <td><a class="btn btn-warning btn-small" href="/admin/edit/{{_id}}">Edit</a> <a class="btn btn-small btn-danger dota1" href="/admin/delete/{{_id}}">Delete</a></td>
+                    <td>{{author}}</td>
+                    </tr>
+                {{/each }} 
+                </tbody>
+             </table>
+        </div>
+        </div>
+    </div>

@@ -1,0 +1,50 @@
+
+<div class="d-flex" id="wrapper">
+        <div class="bg-light border-right" id="sidebar-wrapper">
+          <div class="list-group list-group-flush">
+
+            <a href="/admin" id="dashboard" class="list-group-item list-group-item-action bg-light">
+              <span>
+                <i class="fas fa-columns"></i>
+              </span>
+               Dashboard
+              </a>
+              <!-- Toggle Post SIDE BAR -->
+                <a data-toggle="collapse" role="button" data-target="#collapseSide" aria-expanded="false" aria-controls="collapseSide" class="list-group-item list-group-item-action bg-light">
+                  <span>
+                    <i class="fas fa-clipboard"></i>
+                  </span>
+                Posts
+                <i class="fas fa-angle-down" ></i>
+              </a>    
+              
+              <!-- Collapse Side bar goes here -->
+               <div class="collapse" id="collapseSide">
+                  <a href="/admin/posts" class="list-group-item list-group-item-action bg-light">
+                    All Posts
+                  </a>
+
+                  <a href="/admin/compose" class="list-group-item list-group-item-action bg-light">
+                    Create Post
+                 </a>
+               </div>
+
+            <a href="#" class="list-group-item list-group-item-action bg-light">
+              <span>
+              <i class="fas fa-binoculars"></i>
+             </span>Overview</a>
+
+            <a href="#" class="list-group-item list-group-item-action bg-light"><span>
+              <i class="fas fa-link"></i>
+            </span>Link</a>
+          </div>
+        </div>
+
+        {{!-- Content of the admin page --}}
+             
+             {{{ body }}}
+    </div>  
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>

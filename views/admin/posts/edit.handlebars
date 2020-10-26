@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="container">
+      <h2>Edit Post</h2>
+      <br>
+      <form class="" action="/admin/edit/{{post._id}}" method="post">
+        <label for="authorName">Author Name</label>
+        <input type="text" name="authorName" class="form-control" autocomplete="off" value={{post.author}}>
+        <br>
+        <label for="text" class="titlebar">Title</label>
+        <input type="text" class="form-control" required=true name="title" placeholder="Eg. The Jungle Book" autocomplete="off" value={{post.title}}>
+        <br>
+        <label for="description">Post</label>
+        <textarea name="description" class="form-control" rows="5" cols="80">{{post.description}}</textarea>
+        <br>
+        <button class="btn btn-primary btn-md" type="submit" name="button">Edit</button>
+      </form>
+    </div>
+  </div>
+</div>
+</div>

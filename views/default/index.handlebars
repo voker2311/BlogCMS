@@ -1,0 +1,18 @@
+
+<div class="flexit">
+  <div class="container1">
+      <h1>Welcome Aliens</h1>
+      <p>Lorem epsum</p>
+  </div>
+  <div class="container2">
+      <h2>Recent Posts</h2>
+      {{#each posts}}
+      <hr>
+      <h3>{{title}}</h3>
+      <p><a href="/posts/{{_id}}">View Post</a></p>
+      <p>Posted By : {{author}}</p>
+      <p>Published : {{date}}</p>
+      {{/each}}
+      <br>
+  </div>
+</div>
