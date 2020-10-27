@@ -1,31 +1,33 @@
 <div class="register">
+     
     <div class="register__addons">
       <h2>Something to add</h2>
     </div>
 
     <div class="register__container">
+       {{> admin/messages}}
       <form class="register__form" action="/register" method="post">
-          <!-- <div class="register__name"> 
+           <div class="register__name"> 
             <div class="register__fname">
               <label for="fname">First Name</label>
-              <input type="text" name="fname" class="form-control" required>
+              <input type="text" name="firstName" class="form-control" required>
             </div>
               
             <div class="register__lname">
               <label for="lname">Last Name</label>
-              <input type="text" name="lname" class="form-control" required />
+              <input type="text" name="lastName" class="form-control" required />
             </div>   
           </div>
-          -->
+         
         
-          <label for="text">Username</label>
-          <input type="text" name="username" class="form-control" required>
+          <label for="text">Email</label>
+          <input type="text" name="email" class="form-control" required>
         
           <label for="password">Password</label>
           <input type="password" name="password" class="form-control" required>
 
-          <!-- <label for="password1">Confirm Password</label>
-          <input type="password" name="cnf_password" class="form-control" required> -->
+         <label for="password1">Confirm Password</label>
+          <input type="password" name="cnf_password" class="form-control" required>
 
         <button type="submit" name="submit" class="btn btn-primary">Register</button>  
         <p>More Options?</p>       

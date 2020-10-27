@@ -1,13 +1,14 @@
+{{>admin/messages}}
 <div class="login">
     <div class="login__title">
         <h2>Login</h2>
     </div>
     <form class="login__form" action="/login" method="post">
-        <label for="username">Username</label>
-        <input type="text" name="username" spellcheck="false" required/>
+        <label for="username">Email</label>
+        <input type="email" name="email" spellcheck="false" required="true"/>
 
         <label for="password">Password</label>
-        <input type="password" name="password" required/>
+        <input type="password" name="password" required="true"/>
 
         <button type="submit" class="btn btn-primary" name="submit">Log In</button>
     </form>

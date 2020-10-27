@@ -15,12 +15,24 @@
               <li id="contact" class="nav-item">
                 <a class="nav-link" href="/contact">Contact</a>
               </li>
-              <li id="about" class="nav-item">
-                <a class="nav-link" href="/admin">Admin</a>
-              </li>
-              <li id="login" class="nav-item">
-              <a class="nav-link" href="/login">Login</a>
-            </li>
+              {{#if user}}
+
+                <li id="about" class="nav-item">
+                  <a class="nav-link" href="/admin">Admin</a>
+               </li>
+
+              {{else}}
+                <li id="login" class="nav-item">
+                  <a class="nav-link" href="/login">Login</a>
+                </li>
+                <li id="register" class="nav-item">
+                  <a class="nav-link" href="/register">Register</a>
+                </li>
+
+
+              {{/if}}
+              
+              
             </div>
             </ul>
         </div>

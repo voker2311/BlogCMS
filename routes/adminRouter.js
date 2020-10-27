@@ -2,8 +2,9 @@ const express = require('express');
 const router = express.Router();
 const adminControllers = require('../controllers/adminControllers');
 const { route } = require('./defaultRouter');
+const { isUserAuthenticated } = require("../config/customFunctions");
 
-router.all("/*",(req,res,next) => {
+router.all("/*",isUserAuthenticated,(req,res,next) => {
     req.app.locals.layout = 'admin';
 
     next();
@@ -15,7 +16,8 @@ router.route("/")
 router.route('/posts')
     .get(adminControllers.posts)
 
-
+router.route('/logout')
+    .get(adminControllers.logout);
 
 router.route('/compose')
     .get(adminControllers.compose)

@@ -7,7 +7,7 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const fileUpload = require('express-fileupload');
 const {mongoURL, PORT, globalVariables} = require("./config/config");
-
+const passport = require('passport');
 //Mongoose config
 mongoose.connect(mongoURL, { useNewUrlParser: true })
    .then( response => {
@@ -29,6 +29,9 @@ app.use(session({
     resave:true
 }));
 
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use(flash());
 app.use(globalVariables);
 //View engine stuff
@@ -39,6 +42,7 @@ app.set('view engine','handlebars');
 // Routes
 const defaultRoutes = require('./routes/defaultRouter');
 const adminRoutes = require('./routes/adminRouter');
+
 app.use("/",defaultRoutes);
 app.use("/admin",adminRoutes);
 

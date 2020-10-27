@@ -1,7 +1,10 @@
 <div class="container-fluid">
   <div class="container">
-      <h3>{{post.title}}</h3>
-      <h4>{{post.author}}</h4>
+      <h1>{{post.title}}</h1>
+      <h5>By {{post.author}}</h5>
+      <br>
+      <img class="container__image" src={{post.file}} alt="Not Found">
+      <br>
   </div>
   <div class="container">
       <p>{{post.description}}</p>

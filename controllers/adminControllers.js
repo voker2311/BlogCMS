@@ -34,7 +34,6 @@ module.exports = {
         });
 
         newPost.save().then(post => {
-            console.log(post);
             req.flash('success-message',"Post created successfully")
             res.redirect("/admin/posts");
         });
@@ -69,5 +68,9 @@ module.exports = {
             req.flash("error-message","Post Deleted")
             res.redirect("/admin/posts");
         })
-    }
+    },
+    logout:(req,res) => {
+        req.logout();
+        res.redirect("/");
+     }
 }

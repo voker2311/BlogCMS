@@ -252,4 +252,10 @@
 .container2{
   flex:0.3;
 }
+
+.container__image{
+  width:600px;
+  height:200px;
+  object-fit: contain;
+}
   
